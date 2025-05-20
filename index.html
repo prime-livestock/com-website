@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coming Soon - Prime Livestock</title>
+    <link rel="stylesheet" href="style.css">
+    </head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Prime Livestock</h1>
+            <h2>is Coming Soon!</h2>
+        </header>
+
+        <main>
+            <p class="tagline">We're working hard to bring you something amazing. Get ready for buying and selling <b>livestock</b> on a <b>Prime</b> platform.</p>
+
+            <section class="subscribe">
+                <h3>Be the first to know when we launch!</h3>
+                <form id="subscribe-form">
+                    <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+                    <button type="submit">Notify Me</button>
+                </form>
+                <p id="form-message"></p>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; <span id="year"></span> Prime Livestock. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+        // Basic form handling placeholder - for a real solution, see Phase 3
+        const form = document.getElementById('subscribe-form');
+        const formMessage = document.getElementById('form-message');
+        if(form){
+            form.addEventListener('submit', function(event) {
+                event.preventDefault();
+                // THIS IS A PLACEHOLDER - IT DOESN'T ACTUALLY SEND DATA
+                // See Phase 3 for actual email capture solutions
+                formMessage.textContent = "Thank you for your interest! (This is a demo - email not yet collected)";
+                form.reset();
+            });
+        }
+    </script>
+</body>
+</html>
